@@ -1,0 +1,82 @@
+html,body{
+    height:100%;
+    margin:0;
+    display: grid;
+    background-color:rgb(247, 237, 239);
+    grid-template-rows: auto 1fr auto;
+}
+
+#head{
+    display:flex;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0 20px;
+    background-color:rgb(229, 84, 108);
+    height:80px;
+    width:100%;
+    color:white;
+    font-size:40px;
+}
+#footer{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0 20px;
+    background-color:rgb(229, 84, 108);
+    height:80px;
+    width:100%;
+    color:white;
+    font-size:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: repeat(4, 100px);
+    flex:1;
+    column-gap:70px;
+    row-gap:30px;
+    justify-content:center;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.cards span{
+    position:relative;
+    height:150px;
+    width:150px;
+    border-radius:20px;
+    perspective: 1000px;
+}
+
+.cards img{
+    width:90%;
+    height:90%;   
+}
+
+.cards span .front{
+    background-color:#c29494c2;
+    backface-visibility: hidden;
+    position:absolute;
+    transition: transform 0.6s;
+    z-index:2;
+}
+
+.cards span .back{
+    transform:rotateY(180deg);
+    z-index:1;
+    position:absolute;
+    backface-visibility:hidden;
+    transition: transform 0.6s;
+}
+
+.cards span.flipped .front{
+    transform: rotateY(180deg);
+}
+
+.cards span.flipped .back{
+    transform: rotateY(0deg);
+}
+
+.SuccessfulPairs{
+    background-color:rgb(173, 204, 173) !important;
+}

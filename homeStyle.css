@@ -1,0 +1,71 @@
+body{
+    display:grid;
+    place-items:center;
+    row-gap:100px;
+    background-color:rgb(247, 237, 239);
+    font-size:50px;
+    color:rgb(229, 84, 108);
+}
+
+#head,#footer{
+    background-color:rgb(229, 84, 108);
+    height:80px;
+    width:100%;
+    font-size:40px;
+    color:white;
+}
+
+.button{
+    padding-top:10px;
+    padding-bottom:10px;
+    height:100px;
+    width:200px;
+    font-size:25px;
+    background-color:pink;
+    box-shadow:5px 3px 5px rgb(220, 98, 119);
+    border-radius:50px;
+    text-align:center;
+    color:white;
+}
+
+.button:hover{
+    background-color:rgb(158, 49, 67);
+    color:white;
+    font-size:25px;
+}
+
+.button:active{
+    background-color:rgba(206, 30, 59, 0.676);
+    transform:translateY(10px);
+     color:white;
+    font-size:25px;
+}
+
+ .candy{
+    position: absolute;
+    height:200px;
+    transform:rotateZ(-30deg);
+    right:50px;
+    top:50px;
+    animation: wiggle 1.5s infinite;
+
+ }
+
+ .spiral-candy{
+    position: absolute;
+    height:100px;
+    bottom:200px;
+    left:20px;
+    animation: spin 1.5s infinite;
+ }
+
+ @keyframes wiggle {
+    0% {transform:rotateZ(0deg);}
+    50% {transform:rotateZ(-30deg);}
+    100% {transform:rotateZ(30deg);}
+ }
+
+ @keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+ }
